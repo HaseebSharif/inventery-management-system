@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 
 // Generate Token
 const generateToken = (id) => {
-  return jwt.sign({ id }, "secret", { expiresIn: "1d" });
+  return jwt.sign({ id }, "secret" || process.env.SECRET_TOKEN_KEY, { expiresIn: "1d" });
 };
 
 //Register User

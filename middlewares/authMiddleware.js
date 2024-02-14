@@ -12,7 +12,7 @@ export const verifyUser = asyncHandler(async (req, res, next) => {
     }
 
     // Verify Token
-    const verified = jwt.verify(token, 'secret');
+    const verified = jwt.verify(token, 'secret' || process.env.SECRET_TOKEN_KEY);
     // Get user id from token
     const user = await userModel.findById(verified.id).select("-password");
 
