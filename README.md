@@ -49,9 +49,9 @@ API Documentation
 The backend provides the following API endpoints:
 
 User Registration , Login and Logout End Points:
-•	GET /api/user/register: Registers the new User 
+•	POST /api/user/register: Registers the new User 
 •	POST /api/user/login: Logs In the User
-•	GET /api/user/logout: Logs Out the User
+•	POST /api/user/logout: Logs Out the User
 
 
 
